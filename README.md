@@ -16,7 +16,7 @@
 
 You can start with the main publication here:
 
-👉 [**Wave Theory: First Publication (PDF)**](docs/wave_theory.pdf)
+👉 [**Wave Theory: First Publication (PDF)**](Wave%20Theory%20First%20Publication.pdf)
 
 Or explore concept-specific sections:
 
