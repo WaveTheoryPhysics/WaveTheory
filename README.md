@@ -15,7 +15,7 @@
 ## 📖 Start Reading
 
 You can start with the main publication here:
-👉 [**Wave Theory: First Publication Google Doc **]([Wave%20Theory%20First%20Publication.pdf](https://docs.google.com/document/d/15mawvGHSWeZzMsDauG2QC9M-xQr-y_g7bGZlS1Kguno/edit?usp=drive_link))
+👉 [**Wave Theory: First Publication Google Doc **](https://docs.google.com/document/d/15mawvGHSWeZzMsDauG2QC9M-xQr-y_g7bGZlS1Kguno/edit?usp=drive_link)
 👉 [**Wave Theory: First Publication PDF **](Wave%20Theory%20First%20Publication.pdf)
 👉 [**Wave Theory: Mathematica Notebook **](Wave%20Theory%20First%20Publication.nb)
 ---
