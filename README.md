@@ -3,9 +3,13 @@
 Wave Theory introduces a bold new vision of the universe—where time, gravity, quantum phenomena, and cosmic expansion all emerge from a single principle: the dynamics of wave geometry in a curved energy medium.
 
 Wave Theory stands on three unwavering foundations:
+
 ● Every equation must emerge from first principles.
+
 ● Every prediction must match observation.
+
 ● No result is ever fine-tuned.
+
 
 Any contributions to Wave Theory must adhere to above principles.
 
@@ -25,6 +29,7 @@ Any contributions to Wave Theory must adhere to above principles.
 ## 📖 Start Reading
 
 You can start with the main publication here:
+
 👉 [**Wave Theory: First Publication Google Doc **](https://docs.google.com/document/d/15mawvGHSWeZzMsDauG2QC9M-xQr-y_g7bGZlS1Kguno/edit?usp=drive_link)
 
 👉 [**Wave Theory: First Publication PDF **](Wave%20Theory%20First%20Publication.pdf)
