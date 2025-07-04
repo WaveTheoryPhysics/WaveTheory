@@ -26,6 +26,15 @@ Any contributions to Wave Theory must adhere to above principles.
 
 ---
 
+## 📖 Publications
+
+Preprints:
+
+● Submitted to Foundations of Physics, June 23, 2025:  [** Reformulating Koide Mass Relation Using Inverse Compton Radii in Wave Theory **](Reformulating%20Koide%20Mass%20Relation%20Using%20Inverse%20Compton%20Radii%20in%20Wave%20Theory.pdf)
+● Submitted to Foundations of Physics, July 3, 2025: [** Gravitational Constant G as an Emergent Geometric Quantity from the Expanding 3-Sphere Universe **](Gravitational%20Constant%20G%20as%20an%20Emergent%20Geometric%20Quantity%20from%20the%20Expanding%203-Sphere%20Universe.pdf)
+
+---
+
 ## 📖 Start Reading
 
 You can start with the main publication here:
