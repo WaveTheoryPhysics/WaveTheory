@@ -1,17 +1,16 @@
 ## About Wave Theory
 
-Wave Theory introduces a bold new vision of the universe—where time, gravity, quantum phenomena, and cosmic expansion all emerge from a single principle: the dynamics of wave geometry in a curved energy medium.
+Wave Theory is a geometric framework in which physical phenomena — including gravity, quantum behavior, and cosmic expansion — are understood as consequences of curvature dynamics in a continuous energy medium.
 
-Wave Theory stands on three unwavering foundations:
+The observable universe is modeled as an evolving geometric structure, where curvature, its propagation, and its organization define all physical effects. Localized excitations correspond to structured curvature configurations of the medium, and their interactions reflect the geometric and transport properties of this underlying system .
 
-● Every equation must emerge from first principles.
+The approach is guided by three methodological principles:
 
-● Every prediction must match observation.
+Physical relations should, wherever possible, be derived from first principles of geometry and curvature.
+Predictions must remain consistent with empirical observation.
+The introduction of ad hoc or fine-tuned parameters is avoided; where empirical inputs are required, they are identified explicitly.
 
-● No result is ever fine-tuned.
-
-
-Any contributions to Wave Theory must adhere to above principles.
+Contributions to the development of Wave Theory are expected to follow these principles.
 
 ---
 
