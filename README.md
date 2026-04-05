@@ -6,9 +6,9 @@ The observable universe is modeled as an evolving geometric structure, where cur
 
 The approach is guided by three methodological principles:
 
-Physical relations should, wherever possible, be derived from first principles of geometry and curvature.
-Predictions must remain consistent with empirical observation.
-The introduction of ad hoc or fine-tuned parameters is avoided; where empirical inputs are required, they are identified explicitly.
+1. Physical relations should, wherever possible, be derived from first principles of geometry and curvature.
+2. Predictions must remain consistent with empirical observation.
+3. The introduction of ad hoc or fine-tuned parameters is avoided; where empirical inputs are required, they are identified explicitly.
 
 Contributions to the development of Wave Theory are expected to follow these principles.
 
