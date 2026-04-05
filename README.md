@@ -15,22 +15,11 @@ Any contributions to Wave Theory must adhere to above principles.
 
 ---
 
-## 🔬 Key Contributions
-
-- ✅ Derivation of **Planck constant (ℎ)** from 3-sphere geometry
-- ✅ Reformulation of **gravitational acceleration** without arbitrary mass input
-- ✅ Geometric basis for the **fine-structure constant (α)**
-- ✅ Unified view of **cosmic expansion**, **entropy**, and **curvature**
-- ✅ Explanation of **quantum fluctuations** and the **CMB** from radial turbulence
-- ✅ Compatibility with Penrose’s **Conformal Cyclic Cosmology (CCC)**
-
----
-
 ## 📖 Publications
 
 Preprints:
 
-● Submitted to Foundations of Physics, July 3, 2025: [Gravitational Constant G as an Emergent Geometric Quantity from the Expanding 3-Sphere Universe](Gravitational%20Constant%20G%20as%20an%20Emergent%20Geometric%20Quantity%20from%20the%20Expanding%203-Sphere%20Universe.pdf)
+● [Gravitational Constant G as an Emergent Geometric Quantity from the Expanding 3-Sphere Universe](Gravitational%20Constant%20G%20as%20an%20Emergent%20Geometric%20Quantity%20from%20the%20Expanding%203-Sphere%20Universe.pdf)
 
 ---
 
@@ -49,11 +38,6 @@ You can start with the main publication here:
 ## 🧠 For Researchers and Contributors
 
 This repository is open to collaborative exploration. If you have insights, corrections, or experimental verifications to suggest, feel free to open an issue or submit a pull request.
-
-### 🛠 Requirements
-
-- Familiarity with differential geometry, wave mechanics, and cosmology
-- Computational tools: [Wolfram Mathematica](https://www.wolfram.com/mathematica/), Python (optional)
 
 ---
 
