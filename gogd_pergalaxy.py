@@ -159,9 +159,12 @@ def v_mond(r_kpc: np.ndarray, vgas_kms: np.ndarray, vstar_kms: np.ndarray) -> np
     vg = np.asarray(vgas_kms, dtype=float) * 1.0e3
     vs = np.asarray(vstar_kms, dtype=float) * 1.0e3
     safe_r = np.where(r_m > 0.0, r_m, np.nan)
-    a_n = np.nan_to_num(vg**2 / safe_r, nan=0.0) + np.nan_to_num(vs**2 / safe_r, nan=0.0)
-    a = np.where(a_n < A0_MOND, np.sqrt(a_n * A0_MOND), a_n)
-    return np.sqrt(np.clip(a, 0.0, np.inf) * r_m) / 1.0e3
+    a_bar = np.nan_to_num(vg**2 / safe_r, nan=0.0) + np.nan_to_num(vs**2 / safe_r, nan=0.0)
+    # McGaugh interpolation: nu(y) = 1/(1 - exp(-sqrt(y))), y = a_bar/a0
+    y = a_bar / A0_MOND
+    nu = 1.0 / (1.0 - np.exp(-np.sqrt(np.clip(y, 1e-30, None))))
+    a_mond = a_bar * nu
+    return np.sqrt(np.clip(a_mond, 0.0, np.inf) * r_m) / 1.0e3
 
 # =====================================================================
 # 4. ΛCDM NFW benchmark  (identical to gogd.py)
@@ -321,7 +324,7 @@ def main():
             "alpha0_best", "A_morph",
             "chi2_WT_best", "chi2_WT_kappa",
             "chi2_MOND", "chi2_LCDM",
-            "WT_wins", "MOND_wins", "LCDM_wins",
+            "WT_wins","WT_wins_kappa", "MOND_wins", "LCDM_wins",
             "delta_chi2_WT_MOND", "delta_chi2_WT_LCDM",
             "Vmax_kms", "Rout_kpc",
             "f_gas_mean", "f_gas_outer",
@@ -332,7 +335,7 @@ def main():
 
         for i, fp in enumerate(sample, 1):
             name = fp.stem.replace("_rotmod", "")
-            print(f"  [{i:3d}/{len(sample)}]  {name}", end="  ", flush=True)
+            #print(f"  [{i:3d}/{len(sample)}]  {name}", end="  ", flush=True)
 
             r_kpc, vobs, verr, vgas, vstar = load_rotmod(fp)
             N = len(vobs)
@@ -361,23 +364,27 @@ def main():
             best = min(chi2_best,
                        chi2_mond  if np.isfinite(chi2_mond)  else 1e9,
                        chi2_lcdm if np.isfinite(chi2_lcdm) else 1e9)
+            best_kappa = min(chi2_kappa,
+                       chi2_mond  if np.isfinite(chi2_mond)  else 1e9,
+                       chi2_lcdm if np.isfinite(chi2_lcdm) else 1e9)
             wt_w   = 1 if chi2_best == best else 0
+            wt_w_kappa = 1 if chi2_kappa == best_kappa else 0
             mond_w = 1 if (np.isfinite(chi2_mond)  and chi2_mond  == best) else 0
             lcdm_w = 1 if (np.isfinite(chi2_lcdm) and chi2_lcdm == best) else 0
 
             obs = galaxy_observables(fp, args.H0)
 
-            print(f"α₀={a0_best:.3f}  A_morph={A_morph:.3f}  "
-                  f"χ²_WT={chi2_best:.2f}  χ²_MOND={chi2_mond:.2f}  "
-                  f"χ²_LCDM={fmt(chi2_lcdm)}  "
-                  f"{'WT✓' if wt_w else ('MOND✓' if mond_w else 'LCDM✓')}")
+            #print(f"α₀={a0_best:.3f}  A_morph={A_morph:.3f}  "
+            #      f"χ²_WT={chi2_best:.2f}  χ²_MOND={chi2_mond:.2f}  "
+            #      f"χ²_LCDM={fmt(chi2_lcdm)}  "
+            #      f"{'WT✓' if wt_w else ('MOND✓' if mond_w else 'LCDM✓')}")
 
             w.writerow([
                 name, N,
                 fmt(a0_best), fmt(A_morph),
                 fmt(chi2_best), fmt(chi2_kappa),
                 fmt(chi2_mond), fmt(chi2_lcdm),
-                wt_w, mond_w, lcdm_w,
+                wt_w, wt_w_kappa, mond_w, lcdm_w,
                 fmt(chi2_best - chi2_mond)  if np.isfinite(chi2_mond)  else "",
                 fmt(chi2_best - chi2_lcdm) if np.isfinite(chi2_lcdm) else "",
                 fmt(obs["vmax"]), fmt(obs["rout"]),
@@ -401,7 +408,9 @@ def main():
               f"max={amorph.max():.3f}")
         print(f"  κ reference = {KAPPA:.4f}  (A_morph=1.000)")
         wt_wins = df["WT_wins"].sum()
+        wt_wins_kappa = df["WT_wins_kappa"].sum()
         print(f"\nWT wins (at best per-galaxy α₀): {wt_wins}/{len(df)}")
+        print(f"\nWT_kappa wins (at κ reference): {wt_wins_kappa}/{len(df)}")
     except ImportError:
         pass
 
