@@ -18,7 +18,6 @@ Contributions to the development of Wave Theory are expected to follow these pri
 
 Preprints:
 
-● [Gravitational Constant G as an Emergent Geometric Quantity from the Expanding 3-Sphere Universe](Gravitational%20Constant%20G%20as%20an%20Emergent%20Geometric%20Quantity%20from%20the%20Expanding%203-Sphere%20Universe.pdf)
 
 ---
 
